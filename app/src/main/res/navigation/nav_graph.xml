@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/LoginFragment">
+
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="be.ucll.jmelektromanex.fragments.LoginFragment"
+        android:label="@string/login_fragment_label"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_loginFragment_to_createAccountFragment"
+            app:destination="@id/CreateAccountFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_workOrderListFragment"
+            app:destination="@+id/WorkOrderListFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/CreateAccountFragment"
+        android:name="be.ucll.jmelektromanex.fragments.CreateAccountFragment"
+        android:label="@string/create_account_fragment_label"
+        tools:layout="@layout/fragment_create_account">
+
+        <action
+            android:id="@+id/action_CreateAccountFragment_to_LoginFragment"
+            app:destination="@id/LoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/WorkOrderListFragment"
+        android:name="be.ucll.jmelektromanex.fragments.WorkOrderListFragment"
+        android:label="@string/work_order_list_fragment_label"
+        tools:layout="@layout/fragment_work_order_list" >
+
+        <action
+            android:id="@+id/action_workOrderListFragment_to_workOrderFragment"
+            app:destination="@id/WorkOrderFragment" />
+        <action
+            android:id="@+id/action_workOrderListFragment_to_detailsFragment"
+            app:destination="@+id/DetailsFragment"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/WorkOrderFragment"
+        android:name="be.ucll.jmelektromanex.fragments.WorkOrderFragment"
+        android:label="@string/work_order_fragment_label"
+        tools:layout="@layout/fragment_work_order">
+
+        <action
+            android:id="@+id/action_workOrderFragment_to_workOrderListFragment"
+            app:destination="@id/WorkOrderListFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/DetailsFragment"
+        android:name="be.ucll.jmelektromanex.fragments.DetailsFragment"
+        android:label="@string/details_fragment_label"
+        tools:layout="@layout/fragment_details">
+
+        <action
+            android:id="@+id/action_detailsFragment_to_WorkOrderListFragment"
+            app:destination="@+id/WorkOrderListFragment"/>
+    </fragment>
+
+</navigation>
