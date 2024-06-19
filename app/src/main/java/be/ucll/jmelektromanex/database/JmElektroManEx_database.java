@@ -66,8 +66,8 @@ public abstract class JmElektroManEx_database extends RoomDatabase {
                     INSTANCE.clearAllTables();
                     //1 hardcoded User
                     User user = new User();
-                    user.setFirstName("Ilse");
-                    user.setLastName("Tastenhoye");
+                    user.setFirstName("Jane");
+                    user.setLastName("Smith");
                     user.setUsername("test");
                     user.setPassword("test123");
                     //5 Hardcoded Workorders
